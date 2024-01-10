@@ -86,4 +86,3 @@ function getBookDetailsById($conn, $bookId)
 
     return $bookDetails;
 }
-

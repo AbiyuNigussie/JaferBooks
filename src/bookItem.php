@@ -20,15 +20,10 @@ if (isset($_GET['bookId'])) {
 
     $authorDetails = getAuthorById($conn, $authorId);
     $authorName = 'Unknown Author';
-
-    if ($authorDetails && is_array($authorDetails) && count($authorDetails) > 0) {
-      // Use the first author from the array
-      $firstAuthor = $authorDetails[0];
-
-      // Check if the necessary keys exist
-      if (isset($firstAuthor['FirstName'], $firstAuthor['LastName'])) {
-        $authorName = $firstAuthor['FirstName'] . ' ' . $firstAuthor['LastName'];
-      }
+    
+    if ($authorDetails && isset($authorDetails['FirstName'], $authorDetails['LastName'])) {
+      $authorName = $authorDetails['FirstName'] . ' ' . $authorDetails['LastName'];
+      
     }
   } else {
     echo "Book not found";

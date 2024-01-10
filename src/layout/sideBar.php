@@ -18,9 +18,6 @@
                 <a href="#">
                     <i class="fa-solid fa-cart-shopping"></i>Order
                 </a>
-                <a href="#">
-                    <i class="fa-solid fa-users"></i> Users
-                </a>
                 <a href="adminCatagory.php">
                     <i class="fa-solid fa-cart-shopping"></i>Catagories
                 </a>
